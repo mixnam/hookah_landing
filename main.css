@@ -49,6 +49,7 @@ body {
 }
 
 .nav {
+    z-index: 99;
     height: 100px;
     position: relative;
     background-color: yellow; 
@@ -58,6 +59,23 @@ body {
     position: fixed;
     top: 0px;
     width: 100%;
+}
+
+.caorusel {
+    overflow-x: hidden; 
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    transition: margin-left 1s;
+}
+
+.caorusel__image {
+    max-height: 100%;
+}
+
+.caorusel__image_inactive {
+    opacity: 0.6;
 }
 
 footer {
