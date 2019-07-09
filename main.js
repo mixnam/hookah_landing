@@ -1,3 +1,4 @@
+//init PARALAX
 document.addEventListener('scroll', function() {
     var elements = document.querySelectorAll('.paralax')
     var scrolledHeight = window.pageYOffset
@@ -14,6 +15,7 @@ document.addEventListener('scroll', function() {
     }
 })
 
+//init Sticky navbar
 document.addEventListener('scroll', function() {
     var nav = document.querySelector('.nav');
     var headerHeight = document.querySelector('.header').offsetHeight; 
@@ -24,6 +26,7 @@ document.addEventListener('scroll', function() {
     }
 })
 
+//onload
 window.onload = function() {
     console.log('loaded');
     document.querySelector('#scrollDown').addEventListener('click', function(){
@@ -40,6 +43,7 @@ window.onload = function() {
     caorusel.init('caorusel', imagesUrl);
 }
 
+//Caorusel
 function Caorusel() {
     this.body = null;
     this.imageNodes = null;
@@ -56,7 +60,7 @@ Caorusel.prototype = {
         this.body = root;
 
         //init imagesNodes
-        this.activeNode = imagesUrl.length / 2 | 0;
+        activeNode = imagesUrl.length / 2 | 0;
         this.imageNodes = imagesUrl.map(function(imageUrl) {
             var imageNode = document.createElement('img');
             imageNode.className = 'caorusel__image';
@@ -68,11 +72,12 @@ Caorusel.prototype = {
             this.body.appendChild(this.imageNodes[i]);
         }
 
-        //init arrows    
-        var f = this.activate.bind(this); 
-        f(this.activeNode);
-        setTimeout(function() {
-            f(1)
+        var counter = activeNode;
+        var f = this.activate.bind(this);
+        f(counter % 4)
+        setInterval(function() {
+            counter++;
+            f(counter % 4);
         }, 3000)
     },
     activate : function(index) {
@@ -81,14 +86,14 @@ Caorusel.prototype = {
         var targetOffset = document.body.offsetWidth / 2;
 
         var newMargin = targetOffset - currentOffset;
-        if (newMargin > 0) {
-            while (currentOffset <= targetOffset) {
-                this.body.style['margin-left'] = Number.parseInt(this.body.style['margin-left']) + 1 + 'px';
-                currentOffset = activeNode.offsetLeft + activeNode.offsetWidth / 2;
-            };
-        }
-        this.body.style['margin-left'] = newMargin + 'px';
+        var currentMargin = this.body.style['margin-left'] 
+                                 ? Number.parseInt(this.body.style['margin-left'])
+                                 : 0;
+        this.body.style['margin-left'] = currentMargin + newMargin + 'px';
         activeNode.classList.remove('caorusel__image_inactive');
-        // this.activeNode.classList.add('caorusel__image_inactive');
+        if (this.activeNode !== null) {
+            this.imageNodes[this.activeNode].classList.add('caorusel__image_inactive');
+        }
+        this.activeNode = index;
     }
 }
