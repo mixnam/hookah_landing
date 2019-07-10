@@ -20,7 +20,7 @@
             <i id="scrollDown" class="fas fa-arrow-down"></i>
         </div>
     </header>
-    <nav class="nav">
+    <nav class="nav shadow50">
         <div class="nav__logo">
             <img class="nav__logo logo" src="../assets/hookah-svgrepo-com.svg">
             <div class="nav__logo name">
@@ -29,26 +29,88 @@
             </div>
         </div>
         <div class="nav__links">
-            <a class="link">О нас</a>
-            <a class="link">Услуги</a>
-            <a class="link">Цены</a>
-            <a class="link">Связаться</a>
+            <a href="#about" class="link">О нас</a>
+            <a href="#service" class="link">Услуги</a>
+            <a href="#price" class="link">Цены</a>
+            <a href="#contacts" class="link">Связаться</a>
         </div>
         <div class="nav__menu">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
     <main>
-        <section class="about">
-            <div class="about__content"></div>
+        <section id="about" class="about">
+            <div class="content">
+                <h1>Мы любим кальяны</h1>
+                <h2>Мы самые лучшие в этом деле и тут об этом пишем</h2>
+            </div>
         </section>
-        <section id="caorusel"></section>
-        <!-- <section id="service"></section>
-        <section id="price"></section>
-        <section id="form"></section> -->
+        <section class="shadow50">
+            <div id="caorusel"></div>
+        </section>
+        <section id ="service" class="service">
+            <div class="content">
+                <h1>Мы предоставляем услуги</h1>
+                <h2>выезжаем с кальянами к вам и делаем вам красиво</h2> 
+            </div>
+        </section>
+        <section id="price" class="price shadow50">
+            <div class="price-header">
+                <h1>Наиболее оптимальные пакеты</h1>
+            </div>
+            <div class="price-list">
+                <div class="price-list__item shadow50">
+                    <svg viewBox="0 0 120 120" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="50"/>
+                        <text x="45" y="80">S</text>
+                    </svg>
+                    <div class="divide"></div>
+                    <span>3 КАЛЬЯНА</span>
+                    <span>1 КАЛЬЯНЩИК</span>
+                    <div class="divide"></div>
+                    <span class="bold">3 ЧАСА - 5 000</span>
+                    <span class="bold">6 ЧАСА - 8 000</span>
+                    <input class="ripple" type="button" value="заказать">
+                </div>
+                <div class="price-list__item shadow50">
+                    <svg viewBox="0 0 120 120" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="50"/>
+                        <text x="40" y="80">M</text>
+                    </svg>
+                    <div class="divide"></div>
+                    <span>3 КАЛЬЯНА</span>
+                    <span>1 КАЛЬЯНЩИК</span>
+                    <div class="divide"></div>
+                    <span class="bold">3 ЧАСА - 5 000</span>
+                    <span class="bold">6 ЧАСА - 8 000</span>
+                    <input type="button" value="заказать">
+                </div>
+                <div class="price-list__item shadow50">
+                    <svg viewBox="0 0 120 120" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="50"/>
+                        <text x="50" y="80">L</text>
+                    </svg>
+                    <div class="divide"></div>
+                    <span>3 КАЛЬЯНА</span>
+                    <span>1 КАЛЬЯНЩИК</span>
+                    <div class="divide"></div>
+                    <span class="bold">3 ЧАСА - 5 000</span>
+                    <span class="bold">6 ЧАСА - 8 000</span>
+                    <input type="button" value="заказать">
+                </div>
+            </div>
+            <div class="price-footer">
+                <h1>внимание</h1>
+                <h2>тут какая-то ахуенная инфа</h2>
+            </div>
+        </section>
+        <!-- <section id="form"></section> -->
     </main>
     <footer>
         
     </footer>
 </body>
-</html>>
+</html>

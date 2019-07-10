@@ -1,0 +1,141 @@
+.price {
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+}
+
+.price-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-header > h1 {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.price-header > h2 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.price-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-footer > h1 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.price-footer > h2 {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.price-list {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-list__item {
+    margin: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 470px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+
+.price-list__item:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+.price-list__item > svg {
+    width: 80%;
+}
+
+.price-list__item > svg > circle {
+    fill: antiquewhite;
+}
+
+.price-list__item > svg > text {
+    font-size: 50px;
+    font-weight: 400;
+    font-family: Roboto, sans-serif;
+    fill: white;
+}
+
+.price-list__item > span {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.price-list__item > span.bold {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.price-list__item > .divide {
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+}
+
+.price-list__item > input {
+    border : none;
+    background-color: yellow;
+    padding: 14px;
+    border-radius: 10px;
+    width: 200px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+
+.ripple:hover {
+    background: #fcfa93 radial-gradient(circle, transparent 1%, #fcfa93 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: #f7d76e;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+@media only screen and (max-width : 765px) {
+    .price-list {
+        flex-direction: column;
+    }
+
+    .price-list__item:hover {
+        transform: unset;
+        -webkit-transform: unset;
+    }
+}

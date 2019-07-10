@@ -50,6 +50,8 @@
 }
 
 .link {
+    text-decoration: unset;
+    color : black;
     font-weight: 300;
     font-size: 25px;
     margin: 0 30px 0 10px;
@@ -59,4 +61,25 @@
 
 .link:hover {
     font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav__links {
+      visibility: hidden;
+      opacity: 0;
+      margin-top: 100px;
+      background-color: gold;
+      flex-direction: column;
+      right: 0;
+      position: absolute;
+      transition: opacity 0.5s;
+    }
+
+    .link {
+        margin: 10px !important; 
+    }
+
+    .nav__menu {
+        display: flex !important;
+    }
 }

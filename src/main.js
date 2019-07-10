@@ -3,7 +3,20 @@ window.onload = function() {
     console.log('loaded');
     document.querySelector('#scrollDown').addEventListener('click', function(){
         document.querySelector('.nav').scrollIntoView({behavior : 'smooth'});
-    })
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+        anchor.addEventListener('click', (function (a) {
+            return function (e) {
+                e.preventDefault();
+                var target = document.querySelector(a.getAttribute('href'))
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                })
+            }
+        })(anchor));
+    });
 
     //init Paralax 
     window.Paralax();

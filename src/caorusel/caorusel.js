@@ -11,7 +11,7 @@ window.Caorusel = (function() {
         init : function(rootID, imagesUrl) {
             //init body of the caorusel
             var root = document.getElementById(rootID);
-            root.className = 'caorusel';
+            root.classList.add('caorusel');
             this.body = root;
     
             //init imagesNodes

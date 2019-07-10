@@ -1,14 +1,6 @@
 .about {
     height: 450px;
     width: 100%;
-    background-color: grey;
     display: flex;
     justify-content: center;
-}
-
-.about__content {
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    background-color: aqua;
 }
