@@ -1,0 +1,62 @@
+.nav {
+    z-index: 99;
+    height: 100px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: gold; 
+    display: flex;
+    flex-direction: row;
+    font-family: Roboto, sans-serif;
+}
+
+.nav__logo {
+    font-weight: 300;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.name {
+    flex-direction: column;
+    min-width: 220px;
+    font-size: 30px;
+}
+
+.telephone {
+    font-size: 20px;
+}
+
+.nav__links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav__menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    font-size: 60px;
+    color: darkgrey;
+    padding: 13px;
+}
+
+.link {
+    font-weight: 300;
+    font-size: 25px;
+    margin: 0 30px 0 10px;
+    cursor: pointer;
+    transition: font-size 0.2s;
+}
+
+.link:hover {
+    font-size: 30px;
+}

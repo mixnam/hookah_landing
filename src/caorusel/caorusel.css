@@ -1,0 +1,24 @@
+.caorusel {
+    padding-left: 1000px;
+    overflow-x: hidden; 
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    transition: margin-left 1s;
+}
+
+.caorusel__image {
+    max-height: 100%;
+    transition: opacity 0.5s;
+}
+
+.caorusel__image_inactive {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+    .caorusel {
+        height: 300px;
+    }
+}

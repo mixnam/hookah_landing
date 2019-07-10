@@ -1,0 +1,25 @@
+{
+  "name": "hookah_katering",
+  "version": "1.0.0",
+  "description": "just landing",
+  "main": "main.js",
+  "scripts": {
+    "dev": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixnam/hookah_landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mixnam/hookah_landing/issues"
+  },
+  "homepage": "https://github.com/mixnam/hookah_landing#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}

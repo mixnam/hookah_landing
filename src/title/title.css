@@ -1,0 +1,17 @@
+.title {
+    margin-top: 50px;
+    text-align: center;
+    z-index: 1;
+    font-family: Roboto, sans-serif;
+    color : white;
+}
+
+.title__name {
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.title__description {
+    font-weight: 100;
+    font-size: 30px;
+}

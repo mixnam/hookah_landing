@@ -1,0 +1,14 @@
+.service {
+    height: 450px;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+.service__content {
+    height: 100%;
+    width: 100%;
+    max-width: 80%;
+    background-color: aqua;
+}

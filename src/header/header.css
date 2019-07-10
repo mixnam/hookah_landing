@@ -1,0 +1,28 @@
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__back {
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.39);
+}
+
+.header__bottom {
+    z-index: 0;
+    margin-top : auto;
+    margin-bottom: 25px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.header__bottom:hover {
+    z-index: 1;
+}
