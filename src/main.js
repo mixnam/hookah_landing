@@ -31,6 +31,10 @@ window.onload = function() {
         })(anchor));
     });
 
+    //init Modal
+    var modal = new Modal();
+    modal.init();
+
     //init Form
     var form = new Form();
     form.init();

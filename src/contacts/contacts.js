@@ -14,6 +14,9 @@ window.Form = (function() {
             document.querySelector('.form__button').addEventListener('click', (function () {
                 this.parse().then(function(parsedMsg){
                     console.log(parsedMsg);
+                    document.dispatchEvent(new CustomEvent('modal.show', {detail : 'Ваша заявка успешно отправленна !<br>Мы перезвоним вам в ближайшее веремя'}))
+                }).catch(function(errorEl){
+                    errorEl.style['background-color'] = "#f9d0d0";
                 })
             }).bind(this))
         },
@@ -26,9 +29,7 @@ window.Form = (function() {
                     details : (this.details.value !== '' && this.details.value) ? this.details.value : reject(this.details)
                 }
                 resolve(JSON.stringify(msg));
-            }).bind(this)).catch(function(errorEl){
-                errorEl.style['background-color'] = "#f9d0d0";
-            })
+            }).bind(this))
             return p;
         },
         cleanErrors : function() {
