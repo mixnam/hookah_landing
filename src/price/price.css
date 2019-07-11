@@ -1,6 +1,9 @@
 .price {
     width: 100%;
     background-color: antiquewhite;
+    background-image: url('../assets/fruit_hookah.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;

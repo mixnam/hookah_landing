@@ -12,6 +12,7 @@ main {
     background-image: url('../assets/wallpapper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .content {

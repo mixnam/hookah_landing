@@ -1,5 +1,5 @@
 .service {
-    height: 450px;
+    min-height: 450px;
     width: 100%;
     position: relative;
     z-index: 1;
