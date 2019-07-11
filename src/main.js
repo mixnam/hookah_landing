@@ -31,6 +31,10 @@ window.onload = function() {
         })(anchor));
     });
 
+    //init Form
+    var form = new Form();
+    form.init();
+
     //init Paralax 
     window.Paralax();
 
