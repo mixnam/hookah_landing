@@ -1,0 +1,141 @@
+.contacts {
+    min-height: 450px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.form {
+    grid-area: form;
+    margin: 20px;
+    min-width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 30px 5px rgba(0, 0, 0, 0.35)
+}
+
+.form__row {
+    margin: 5px 30px 5px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__row-name {
+    margin: 3px;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.form__row-input {
+    margin: 3px;
+    outline-color: gold;
+    background-color: azure;
+    border-style: unset;
+    border: solid 1px;
+    border-color: grey;
+    border-radius: 3px;
+    height: 21px;
+    width: 200px;
+    font-family: Roboto,sans-serif;
+}
+
+.form__row-input_details {
+    height: 60px;
+}
+
+.form__button {
+    margin: 10px 0 20px 0px;
+    height: 42px;
+    width: 112px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contacts__title {
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.contacts__description {
+    display: grid;
+    grid-template-areas: 
+    "form-name  or  phone-name"
+    "form       or  phone-description"
+}
+
+#form-name {
+    grid-area: form-name;
+}
+
+#or {
+    grid-area: or;
+}
+
+#phone-name {
+    grid-area: phone-name;
+}
+
+#phone-description {
+    grid-area: phone-description;
+}
+
+.contacts__description span {
+    font-family: Roboto, sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.contacts__description h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contacts__description > #phone-description {
+    font-family: Roboto, sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin-top: 30px;
+    text-align: left;
+    min-width: 300px;
+}
+
+.contacts__description-bold {
+    font-weight: 400 !important;
+    font-size: 23px !important;
+}
+
+@media only screen and (max-width: 769px) {
+    .contacts__description {
+        display: grid;
+        grid-template-areas: 
+        "phone-name"
+        "phone-description"
+        "or"
+        "form-name"
+        "form"
+    }
+
+    #phone-name {
+        text-align: center;
+    }
+}

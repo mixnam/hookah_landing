@@ -18,6 +18,19 @@ window.onload = function() {
         })(anchor));
     });
 
+    document.querySelectorAll('input[type="button"]').forEach(function(anchor){
+        anchor.addEventListener('click', (function (a) {
+            return function (e) {
+                e.preventDefault();
+                var target = document.querySelector('#contacts');
+                window.scrollTo({
+                    top: target.offsetTop - 100,
+                    behavior: 'smooth'
+                })
+            }
+        })(anchor));
+    });
+
     //init Paralax 
     window.Paralax();
 

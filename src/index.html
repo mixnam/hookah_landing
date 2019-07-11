@@ -6,6 +6,7 @@
     <title>Hookah catering</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
     <script src="https://kit.fontawesome.com/8ea078426c.js"></script>
     <script src='main.js'></script>
 </head>
@@ -42,6 +43,7 @@
         <section id="about" class="about">
             <div class="content">
                 <h1>Мы любим кальяны</h1>
+                <div class="divide"></div>
                 <h2>Мы самые лучшие в этом деле и тут об этом пишем</h2>
                 <h2>Мы самые лучшие в этом деле и тут об этом пишем</h2>
                 <h2>Мы самые лучшие в этом деле и тут об этом пишем</h2>
@@ -53,6 +55,7 @@
         <section id ="service" class="service">
             <div class="content">
                 <h1>Мы предоставляем услуги</h1>
+                <div class="divide"></div>
                 <h2>выезжаем с кальянами к вам и делаем вам красиво на свадьбах</h2> 
                 <h2>выезжаем с кальянами к вам и делаем вам красиво на корпаративах</h2> 
                 <h2>выезжаем с кальянами к вам и делаем вам красиво на вечеринках</h2> 
@@ -65,10 +68,24 @@
             </div>
             <div class="price-list">
                 <div class="price-list__item shadow50">
+                    <h1>Вечеринка</h1>
                     <svg viewBox="0 0 120 120" version="1.1"
                         xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="60" cy="60" r="50"/>
-                        <text x="45" y="80">S</text>
+                        <defs>
+                            <filter id="f2">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
+                                <feOffset dx="2" dy="2" result="offsetblur"/> 
+                                <feComponentTransfer>
+                                    <feFuncA type="linear" slope="0.5"/> 
+                                </feComponentTransfer>
+                                <feMerge> 
+                                    <feMergeNode/> 
+                                    <feMergeNode in="SourceGraphic"/> 
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="60" cy="60" r="50" filter="url(#f2)"/>
+                        <image x="30" y="30" width="60" height="60" xlink:href="../assets/fireworks.svg" />
                     </svg>
                     <div class="divide"></div>
                     <span>3 КАЛЬЯНА</span>
@@ -79,10 +96,11 @@
                     <input class="ripple" type="button" value="ЗАКАЗАТЬ">
                 </div>
                 <div class="price-list__item shadow50">
+                    <h1>Корпаратив</h1>
                     <svg viewBox="0 0 120 120" version="1.1"
                         xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="60" cy="60" r="50"/>
-                        <text x="40" y="80">M</text>
+                        <circle cx="60" cy="60" r="50" filter="url(#f2)"/>
+                        <image x="30" y="30" width="60" height="60" xlink:href="../assets/group-of-men.svg" />
                     </svg>
                     <div class="divide"></div>
                     <span>3 КАЛЬЯНА</span>
@@ -93,10 +111,11 @@
                     <input class="ripple" type="button" value="ЗАКАЗАТЬ">
                 </div>
                 <div class="price-list__item shadow50">
+                    <h1>Событие</h1>
                     <svg viewBox="0 0 120 120" version="1.1"
                         xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="60" cy="60" r="50"/>
-                        <text x="50" y="80">L</text>
+                        <circle cx="60" cy="60" r="50" filter="url(#f2)"/>
+                        <image x="30" y="30" width="60" height="60" xlink:href="../assets/man-in-a-party-dancing-with-people.svg" />
                     </svg>
                     <div class="divide"></div>
                     <span>3 КАЛЬЯНА</span>
@@ -112,10 +131,54 @@
                 <h2>тут какая-то ахуенная инфа</h2>
             </div>
         </section>
-        <!-- <section id="form"></section> -->
+        <section id="contacts" class="contacts">
+            <div class="content">
+                <h1 class="contacts__title">Cвяжитесь с нами удобным для вас способом</h1>
+                <div class="contacts__description">
+                    <span id="form-name" class="contacts__description-bold">Заполните форму обратной связи</span>
+                    <span id="or">или</span>
+                    <span id="phone-name" class="contacts__description-bold">Просто позвоните нам</span>
+                    <div id="phone-description">
+                        <div class="divide"></div>
+                        <h1>+7 900 000 00 00</h1>
+                        <ul>
+                            <li>
+                                <span>- Уточним все детали вашего заказа</span>
+                            </li>
+                            <li>
+                                <span>- Сделаем вам приятно </span>
+                            </li>
+                            <li>
+                                <span>- Вам понравится </span>
+                            </li>
+                        </ul>
+                        <div class="divide"></div>
+                    </div>
+                    <form class="form">
+                        <div class="form__row">
+                            <span class="form__row-name">Контакт для связи</span>
+                            <input class="form__row-input" type="text" placeholder="+7 900 000 00 00">
+                        </div>
+                        <div class="form__row">
+                            <span class="form__row-name">Ваше имя</span>
+                            <input class="form__row-input" type="text" placeholder="">
+                        </div>
+                        <div class="form__row">
+                            <span class="form__row-name">Детали заказа</span>
+                            <textarea class="form__row-input form__row-input_details" type="text"></textarea>
+                        </div>   
+                        <button type="button" class="form__button ripple">Отпрaвить</button> 
+                    </form> 
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        
+            <div>
+                Icons made by <a href="https://www.freepik.com/?__hstc=57440181.0b84c3cda7d29708faeb364d71352132.1562839781899.1562839781899.1562839781899.1&__hssc=57440181.3.1562839781899&__hsfp=237958934" title="Freepik">Freepik</a> 
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> 
+                is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            </div>
     </footer>
 </body>
 </html>
