@@ -12,7 +12,13 @@ footer {
     background-color: rgb(97, 79, 64);
 }
 
+footer > span {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
 footer a {
+    text-align: center;
     color: black;  
 }
 
@@ -44,6 +50,16 @@ main {
 .content > h2 {
     font-size: 25px;
     font-weight: 300;
+}
+
+.content > span {
+    margin: 5px;
+    font-size: 25px;
+    font-weight: 300;    
+}
+
+.content:first-of-type(span) {
+    margin-top: 70px;
 }
 
 .shadow50 {

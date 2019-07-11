@@ -14,8 +14,7 @@
 
 .modal__content {
     border-radius: 10px;
-    height: 300px;
-    width: 300px;
+    padding: 50px;
     background-color: aliceblue;
     display: flex;
     justify-content: center;

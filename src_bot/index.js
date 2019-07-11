@@ -1,10 +1,13 @@
 const Telegraf = require('telegraf');
-const TOKEN = '';
+const SocksAgent = require('socks5-https-client/lib/Agent');
+const { TOKEN, chatID} = require('./config');
+
+const socksAgent = new SocksAgent({
+    socksHost: '45.13.31.116',
+    socksPort: '60079'
+});
 
 
-const bot = new Telegraf(TOKEN);
-bot.start((ctx) => ctx.reply('Welcome'))
-bot.on('text', ctx => {
-    ctx.reply(ctx.chatId);
-})
-bot.launch();
+const bot = new Telegraf(TOKEN, {telegram : {agent : socksAgent}});
+
+bot.telegram.sendMessage(chatID, '__haha__')

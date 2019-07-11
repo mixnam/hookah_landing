@@ -19,7 +19,9 @@ window.Modal = (function(){
         show : function(val) {
             this.modalText.innerHTML = val.detail;
             this.modalBG.style['display'] = 'flex';
-            this.modalBG.style['opacity'] = '1'
+            setTimeout((function(){
+                this.modalBG.style['opacity'] = '1'
+            }).bind(this), 1)
         },
         hide : function() {
             setTimeout((function(){
