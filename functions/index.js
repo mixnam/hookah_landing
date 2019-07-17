@@ -14,7 +14,8 @@ const bot = new Telegraf(config.TOKEN);
 
 const whitelist = [
     'https://hookah-catering-69873.firebaseapp.com', 
-    'https://hookah-catering-69873.web.app'
+    'https://hookah-catering-69873.web.app',
+    'https://hookah-catering.site'
 ]
 const corsOptions = {
   origin: (origin, callback) => {

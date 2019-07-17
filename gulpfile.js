@@ -31,7 +31,7 @@ function js_build() {
 
 function html_build() {
     return src('src/*.html')
-            .pipe(replace(/..\/assets/g,'./assets'))
+            .pipe(replace(/\.\.\/assets/g,'./assets'))
             .pipe(dest('build'))
 }
 
