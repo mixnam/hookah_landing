@@ -30,7 +30,9 @@ const corsOptions = {
 exports.newOrder = functions.https.onRequest((req, resp) => {
     return cors(corsOptions)(req, resp, () => {
         console.log('Request body - ', req.body)
-        if (req.body) {
+        if (req.body.phone && 
+            req.body.name &&
+            req.body.details) {
             const orderMsg =
             `
             !!! НОВЫЙ ЗАКАЗ !!!
