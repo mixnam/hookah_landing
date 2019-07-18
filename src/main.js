@@ -18,7 +18,7 @@ window.onload = function() {
         })(anchor));
     });
 
-    document.querySelectorAll('input[type="button"]').forEach(function(anchor){
+    document.querySelectorAll('.price-list__item > button').forEach(function(anchor){
         anchor.addEventListener('click', (function (a) {
             return function (e) {
                 e.preventDefault();

@@ -6,7 +6,6 @@ const unglify = require('gulp-uglify');
 function js() {
     return src('src/**/*.js')
            .pipe(concat('main.js'))
-           .pipe(unglify())
            .pipe(dest('dist'))
 }
 

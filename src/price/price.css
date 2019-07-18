@@ -114,7 +114,7 @@
     background-color: grey;
 }
 
-.price-list__item > input {
+.price-list__item > button {
     border : none;
     background-color: yellow;
     padding: 14px;

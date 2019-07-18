@@ -116,7 +116,7 @@ main {
 
 .form {
     grid-area: form;
-    margin: 20px;
+    margin: auto;
     min-width: 350px;
     background-color: white;
     border-radius: 10px;
@@ -512,7 +512,7 @@ main {
     background-color: grey;
 }
 
-.price-list__item > input {
+.price-list__item > button {
     border : none;
     background-color: yellow;
     padding: 14px;
